@@ -1,1 +1,2 @@
-# askdjango-E03-review
+# AskDjango Day3 오프라인 강의 복습
+

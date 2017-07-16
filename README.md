@@ -3,6 +3,7 @@
 ## 강의
 
 날짜: 2017.07.15(토) 13:00 ~ 17:00
+
 장소: [하이브아레나](http://map.naver.com/?mapmode=0&lng=687e734cf6adc46f4546562c1bc789da&pinId=35914663&pinType=site&lat=0bbe8c0b1a44b349990e91640f99d74b&dlevel=11&enc=b64)
 
 ## 수업 내용

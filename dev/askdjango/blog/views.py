@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 ''' from django.shortcuts import render에 대한 설명
@@ -27,6 +27,13 @@ def post_list2(request):
 	response = render(request, 'blog/post_list.html', {'name': name})	# 좌 측의 name을 우측의 name으로 넘긴다.
 	return response
 
+def post_list3(request):
+	'FBV: JSON 형식 응답하기'
+
+	return JsonResponse({
+		'message': '안녕, 파이썬&장고',
+		'items': ['파이썬', '장고', 'Celery', 'Azure', 'AWS'],
+	}, json_dumps_params={'ensure_ascii': False})
 
 #def mysum(request, x):
 #	''' 인자: 정수 1개

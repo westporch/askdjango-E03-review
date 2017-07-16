@@ -20,6 +20,13 @@ def post_list1(request):
 		<p> {name} </p>
 		<p>여러분의 파이썬&장고 페이스메이커가 되겠습니다.</p>'''.format(name=name))
 
+def post_list2(request):
+	'FBV: 템플릿을 통해 HTML형식 응답하기'
+
+	name = '공유'
+	response = render(request, 'blog/post_list.html', {'name': name})	# 좌 측의 name을 우측의 name으로 넘긴다.
+	return response
+
 
 #def mysum(request, x):
 #	''' 인자: 정수 1개

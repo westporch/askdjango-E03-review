@@ -11,6 +11,16 @@ def post_list(request):
 	#print(request.META['REMOTE_ADDR']) # 웹으로 django 접속시 remote host의 ip를 runserver 콘솔에 출력한다.
 	return render(request, 'blog/post_list.html')
 
+def post_list1(request):
+	'FBV: 직접 문자열로 HTML형식 응답하기'
+
+	name = '공유'
+	return HttpResponse('''
+		<h1>AskDjango</h1>
+		<p> {name} </p>
+		<p>여러분의 파이썬&장고 페이스메이커가 되겠습니다.</p>'''.format(name=name))
+
+
 #def mysum(request, x):
 #	''' 인자: 정수 1개
 #    리턴값: URL에 입력한 값(정수 1개)을 리턴하여 웹페이지에 출력한다.

@@ -1,3 +1,4 @@
+import os
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
@@ -34,6 +35,18 @@ def post_list3(request):
 		'message': '안녕, 파이썬&장고',
 		'items': ['파이썬', '장고', 'Celery', 'Azure', 'AWS'],
 	}, json_dumps_params={'ensure_ascii': False})
+
+def excel_download(request):
+	'FBV: 엑셀 다운로드 응답하기'
+	
+	filepath = '/home/westporch/test.xlsx'
+	filename = os.path.basename(filepath)
+
+	with open(filepath, 'rb') as f:
+		response = HttpResponse(f, content_type='application/vnd.ms-excel')
+		# 필요한 응답헤더 세팅
+		response['Content-Disposition'] = 'attachment; filename="{}"'.format(filename)
+		return response
 
 #def mysum(request, x):
 #	''' 인자: 정수 1개

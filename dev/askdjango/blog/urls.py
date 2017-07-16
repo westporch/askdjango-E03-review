@@ -28,4 +28,5 @@ urls.py 파일에는 항상 urlpatterns 리스트(순서가 있는 자료구조)
 
 urlpatterns = [
 	url(r'^$', views.post_list),	# ^$는 아무것도 없는 정규표현식을 의미함, r은 Raw의 약자이다.
+    url(r'^sum/(?P<x>\d+)/$', views.mysum),
 ]

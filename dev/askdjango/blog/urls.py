@@ -25,7 +25,7 @@ urls.py 파일에는 항상 urlpatterns 리스트(순서가 있는 자료구조)
 매칭되는 url이 없다면 404 not found 메시지가 발생한다.
 '''
 
-
+# 1개의 view에 여러 개의 url을 정의해도 된다.
 urlpatterns = [
     url(r'^$', views.post_list),									# ^$는 아무것도 없는 정규표현식을 의미함, r은 Raw의 약자이다.
     url(r'^sum/(?P<x>\d+)/(?P<y>\d+)/(?P<z>\d+)/$', views.mysum),	# 인자가 3개일 경우

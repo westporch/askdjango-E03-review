@@ -12,8 +12,17 @@ def post_list(request):
 	return render(request, 'blog/post_list.html')
 
 def mysum(request, x):
-	'''리턴값: URL에 입력한 값을 리턴하여 웹페이지에 출력한다.
+	''' 인자: 정수 1개
+    리턴값: URL에 입력한 값(정수 1개)을 리턴하여 웹페이지에 출력한다.
 	사용법(예): 웹브라우저의 주소 창에 아래 주소를 입력한다. (999가 출력된다.)
 				http://192.168.0.17:8080/blog/sum/999/
 	'''
 	return HttpResponse(int(x))
+
+def mysum(request, x, y):
+	''' 인자: 정수 2개
+    리턴값: URL에 입력한 값(정수 2개)을 더한 뒤 리턴하여 웹페이지에 출력한다.
+	사용법(예): 웹브라우저의 주소 창에 아래 주소를 입력한다. (1000이 출력된다.)
+				http://192.168.0.17:8080/blog/sum/999/1
+	'''
+	return HttpResponse(int(x) + int(y))

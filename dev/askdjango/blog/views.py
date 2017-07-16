@@ -26,3 +26,12 @@ def mysum(request, x, y):
 				http://192.168.0.17:8080/blog/sum/999/1
 	'''
 	return HttpResponse(int(x) + int(y))
+
+def mysum(request, x, y, z):
+	''' 인자: 정수 3개
+    리턴값: URL에 입력한 값(정수 3개)을 더한 뒤 리턴하여 웹페이지에 출력한다.
+	사용법(예): 웹브라우저의 주소 창에 아래 주소를 입력한다. (1004가 출력된다.)
+				http://192.168.0.17:8080/blog/sum/999/1/4
+	'''
+	return HttpResponse(int(x) + int(y) + int(z))
+

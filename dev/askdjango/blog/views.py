@@ -35,3 +35,9 @@ def mysum(request, x, y, z):
 	'''
 	return HttpResponse(int(x) + int(y) + int(z))
 
+def greet_korean(request, korean_name, age):
+	'''인자: 2개 (한글 이름, 나이)
+	리턴값(예): 안녕하세요. 공유. 37살이시네요.
+    사용법(예): http://192.168.0.17:8080/blog/hello/%EA%B3%B5%EC%9C%A0/37/
+	'''
+	return HttpResponse("안녕하세요. {korean_name}. {age}살이시네요.".format(korean_name=korean_name, age=int(age)))

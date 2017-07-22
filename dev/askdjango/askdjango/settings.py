@@ -123,6 +123,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ''' django-debug-toolbar에 접속할 호스트 설정
+--> settings.py에 INTERNAL_IPS를 설정하면 된다.
+(만약 INTERNAL_IPS를 설정하지 않으면 django-debug-toolbar는 보이지 않는다.)
 
 디버그 정보는 누구나 볼 수 있도록 사용하면 안된다.
 윈도우에서 리눅스 VM에 접속하려면 윈도우의 IP (INTERNAL_IPS)를 적어줘야 한다.

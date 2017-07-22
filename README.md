@@ -26,3 +26,13 @@
 | :--: | :--: |
 | Django | v1.11.3 |
 | Python | v3.5 |
+| Django-debug-toolbar | v1.8 |
+
+### 사용 방법
+
+```
+# git clone https://github.com/westporch/askdjango-day03-review.git
+# cd YOUR_PATH/askdjango-day03-review/myenv/bin
+# source activate
+(myenv) # pip3 install django==1.11.3
+(myenv) # pip3 install django-debug-toolbar==1.8

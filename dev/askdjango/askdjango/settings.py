@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'blog',
+	'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+	'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,3 +121,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+''' django-debug-toolbar에 접속할 호스트 설정
+
+디버그 정보는 누구나 볼 수 있도록 사용하면 안된다.
+윈도우에서 리눅스 VM에 접속하려면 윈도우의 IP (INTERNAL_IPS)를 적어줘야 한다.
+INTERNAL_IPS는 blog/views.py에서 print(request.META['REMOTE_ADDR'])를 추가하여 runserver 콘솔에서 확인할 수 있다.
+'''
+INTERNAL_IPS = ["127.0.0.1", "192.168.0.10", "10.0.2.2"]

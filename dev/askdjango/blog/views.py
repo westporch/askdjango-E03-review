@@ -24,6 +24,8 @@ def post_list1(request):
 def post_list2(request):
 	'FBV: 템플릿을 통해 HTML형식 응답하기'
 
+	print(request.META['REMOTE_ADDR']) # 웹으로 django 접속시 remote host의 ip를 runserver 콘솔에 출력한다.
+
 	name = '공유'
 	response = render(request, 'blog/post_list.html', {'name': name})	# 좌 측의 name을 우측의 name으로 넘긴다.
 	return response
